@@ -1,5 +1,5 @@
 {
-  "homepage": "",
+  "homepage": "https://AshishK1702.github.io/My_Portfolio",
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "framer-motion": "^12.23.25",
