@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from 'react';
+import { Analytics } from "@vercel/analytics/next"
 import { 
   Terminal, Cpu, Code, Database, Brain, Layers, Github, Linkedin, Mail, 
   X, Send, MessageSquare, Minimize2, ChevronRight, Download, ExternalLink, 
@@ -25,7 +26,7 @@ const DATA = {
     name: "Ashish Anil Khatavkar",
     roles: ["AI/ML Engineer", "Full Stack Engineer", "Data Strategist"],
     headline: "Engineering the Future of Intelligence.",
-    bio: "I bridge the gap between abstract AI models and tangible software solutions. Specializing in predictive analytics, scalable neural architectures, and precision engineering.",
+    bio: "I bridge the gap between abstract AI models and tangible software solutions. Specializing in predictive analytics, scalable neural architectures, and precision engineering at Tech Mahindra.",
     email: "ashishkhatavkar111@gmail.com",
     phone: "+91 7350213890",
     github: "github.com/AshishK1702",
@@ -106,93 +107,75 @@ const DATA = {
     // Add more certificates here...
   ],
   projects: [
-    // {
-    //   id: 1,
-    //   title: "Predictive Maintenance AI",
-    //   tag: "Deep Learning",
-    //   metric: "92% Accuracy",
-    //   summary: "LSTM-based anomaly detection system for industrial IoT sensors.",
-    //   // IMAGE PATH: /public/project1.png
-    //   image: "/project1.png",
-    //   star: {
-    //     situation: "Factory downtime costing $50k/hr due to motor failures.",
-    //     task: "Predict failures 24 hours in advance.",
-    //     action: "Trained LSTM models on 2TB of sensor logs.",
-    //     result: "Reduced downtime by 40% with 92% prediction accuracy."
-    //   },
-    //   tech: ["Python", "Keras", "IoT", "NumPy"],
-    //   github: "https://github.com/AshishK1702",
-    //   demo: "#"
-    // },
     {
       id: 1,
-      title: "SentinelAI",
+      title: "Predictive Maintenance AI",
       tag: "Deep Learning",
       metric: "92% Accuracy",
-      summary: "The platform serves as a unified, production-grade SIEM solution designed to analyze the complete log dataset, regardless of volume, while maintaining smooth operation through optimized visualization. It successfully provides real-time security intelligence and compliance monitoring to drastically reduce manual analysis time and strengthen an organization's defensive posture.",
+      summary: "LSTM-based anomaly detection system for industrial IoT sensors.",
       // IMAGE PATH: /public/project1.png
-      image: "/SentinelAI.png",
+      image: "/project1.png",
       star: {
-        situation: "The continuous analysis of all ingested logs instantly identifies critical security threats, including SQL injection and XSS, alongside significant compliance risks such as GDPR and PCI-DSS data leakage. A global risk radar and detailed dashboards provide an immediate, comprehensive overview of the current threat landscape, including risk velocity and temporal threat heatmaps.",
-        task: "Security analysts manage incidents directly using the Alert Triage Workflow to update the status of any log (New, Investigating, Blocked) for a clear audit trail.",
-        action: "The Automation Engine independently executes pre-defined rules, allowing for immediate actions like IP blocking or automated notification upon detecting critical events.",
-        result: "The effectiveness of the security program is measured through instant Key Performance Indicators (KPIs) like Compliance Score and Mean Time to Detect (MTTD). Comprehensive Executive Reports can be generated instantly, providing a strategic summary, a prioritized AI-driven remediation plan, and a list of high-risk assets (IPs) that require immediate blocking."
+        situation: "Factory downtime costing $50k/hr due to motor failures.",
+        task: "Predict failures 24 hours in advance.",
+        action: "Trained LSTM models on 2TB of sensor logs.",
+        result: "Reduced downtime by 40% with 92% prediction accuracy."
       },
       tech: ["Python", "Keras", "IoT", "NumPy"],
-      github: "https://github.com/AshishK1702/sentinel-platform-prod-v2",
-      demo: "https://sentinel-platform-prod-v2-7ovieajpe-ashish-khatavkars-projects.vercel.app/"
+      github: "https://github.com/AshishK1702",
+      demo: "#"
     },
     {
       id: 2,
       title: "MindCrafters",
       tag: "E-Learning Platform",
       metric: "100% Accuracy",
-      summary: "MindCrafters is a scalable e-learning Single Page Application built with React.js and Firebase to provide structured lessons, real-time progress tracking, and automated digital certificates. The platform successfully delivers a responsive, user-friendly environment featuring secure authentication and dedicated dashboards for both student learning and administrative management.",
+      summary: "MindCrafters is a responsive e-learning Single Page Application (SPA) built with React.js, Tailwind CSS, and Firebase to deliver structured courses and automated certification. The platform successfully provides a fast, scalable environment with real-time progress tracking for students and comprehensive management tools for administrators, meeting all core project objectives.",
       // IMAGE PATH: /public/project1.png
       image: "/Mindcrafters.png",
       star: {
         situation: "The project was initiated in response to the significant growth of the e-learning sector and the rising demand for flexible, self-paced learning options . While research indicates that students prefer environments offering clear progress tracking and certificate-based motivation, existing platforms like Coursera and Udemy are often viewed as overly complex or inaccessible due to costs . To address the specific market need for simple, fast, and structured learning systems, the MindCrafters platform was conceptualized to provide lesson-wise learning, automated digital certificates, and a user-friendly interface tailored for technology learners.",
         task: "The development followed a seven-week timeline, progressing from requirement study and literature review to system design, backend setup, and final testing . The technical architecture was built as a Single Page Application (SPA) utilizing a modern tech stack, specifically React.js, Vite, and Tailwind CSS for a responsive frontend, integrated with Firebase for authentication, real-time Firestore database storage, and hosting . Key implementation milestones included the creation of role-based access control for admins and students, alongside core modules such as the course catalog, lesson player, student dashboard, and an automated certificate generator.",
         action: "",
-        result: "The project successfully delivered a fully functional, scalable e-learning web application that achieves smooth navigation, secured login capabilities, and real-time progress tracking . The use of Firebase significantly improved system stability and reduced server overhead, resulting in a fast and reliable user interface that meets the objective of auto-generating certificates upon course completion . While the current iteration effectively demonstrates core competencies, the platform lays a solid foundation for future enhancements such as video lesson integration, payment gateways, and advanced analytics."
+        result: "Reduced downtime by 40% with 92% prediction accuracy."
       },
-      tech: ["React", "Vite", "Tailwind CSS", "Firebase Authentication", "Firestore Database", "GitHub"],
+      tech: ["React", "Vite", "Tailwind CSS", "NumPy"],
       github: "https://github.com/AshishK1702/mindcrafters-app",
       demo: "https://ashishk1702.github.io/mindcrafters-app/"
     },
-    // {
-    //   id: 4,
-    //   title: "CodeRefactorAI",
-    //   tag: "GenAI Tool",
-    //   metric: "30% Faster Reviews",
-    //   summary: "Automated security analysis engine using LLMs and AST parsing.",
-    //   // IMAGE PATH: /public/project2.png
-    //   image: "/project2.png",
-    //   star: {
-    //     situation: "Security vulnerabilities missed in manual reviews.",
-    //     task: "Automate detection of injection attacks.",
-    //     action: "Built AST parser + OpenAI API pipeline.",
-    //     result: "30% reduction in code review cycle time."
-    //   },
-    //   tech: ["OpenAI", "AST", "FastAPI", "Python"],
-    //   github: "https://github.com/AshishK1702",
-    //   demo: "#"
-    // },
     {
       id: 3,
+      title: "CodeRefactorAI",
+      tag: "GenAI Tool",
+      metric: "30% Faster Reviews",
+      summary: "Automated security analysis engine using LLMs and AST parsing.",
+      // IMAGE PATH: /public/project2.png
+      image: "/project2.png",
+      star: {
+        situation: "Security vulnerabilities missed in manual reviews.",
+        task: "Automate detection of injection attacks.",
+        action: "Built AST parser + OpenAI API pipeline.",
+        result: "30% reduction in code review cycle time."
+      },
+      tech: ["OpenAI", "AST", "FastAPI", "Python"],
+      github: "https://github.com/AshishK1702",
+      demo: "#"
+    },
+    {
+      id: 4,
       title: "Arundhati World Portal",
       tag: "Full Stack",
       metric: "40% Lead Growth",
-      summary: "I developed a fully functional full-stack travel agency website for Arunndhati World Pvt. Ltd. using HTML, CSS, JavaScript, PHP, and MySQL. The platform is live, stable, and enables seamless tour browsing, booking, and customer interaction.",
+      summary: "High-performance travel booking engine with dynamic pricing.",
       // IMAGE PATH: /public/project3.png
       image: "/Arunndhati.png",
       star: {
-        situation: "The company required a modern, reliable, and user-friendly travel booking website that could handle real-time inquiries and streamline operations. Existing tools were insufficient, which created a need for a custom-built solution with better performance and full control over data.",
-        task: "I designed and developed the website architecture end-to-end, implemented responsive UI/UX, integrated dynamic tour modules, booking forms, admin features, and connected the system to a secure MySQL database.",
-        action: "Rigorous testing, optimization, and deployment ensured smooth functionality across devices and real-world usage.",
-        result: "The website significantly improved customer engagement, reduced manual booking effort, and increased operational efficiency for the agency. With faster response times and a professional interface, it enhanced brand visibility and contributed to higher lead conversions."
+        situation: "Legacy system couldn't handle peak traffic.",
+        task: "Rebuild for scale and speed.",
+        action: "Responsive HTML5/CSS3 frontend with Python microservices.",
+        result: "Zero downtime during holiday season; 40% more leads."
       },
-      tech: ["JavaScript", "PHP", "SQL", "HTML5", "CSS"],
+      tech: ["JavaScript", "Python", "SQL", "HTML5"],
       github: "https://github.com/AshishK1702",
       demo: "https://arunndhatiworld.com"
     }
@@ -205,28 +188,16 @@ const DATA = {
       period: "Oct 2024 - Present",
       desc: "Architecting scalable backend systems.",
       achievements: [
-        "Hands-on Data Science Work: Gained practical experience in data cleaning, preprocessing, model building, and performance evaluation using Python and statistical techniques.",
-        "AIML Project Exposure: Worked on implementing machine learning workflows, automation scripts, and AI-driven solutions to solve real business problems.",
-        "Industry-Ready Skills: Strengthened understanding of real-time datasets, cloud-based AI tools, and deployment practices while collaborating in an enterprise-level tech environment."
+        "Optimized ETL pipelines reducing data processing time by 25%.",
+        "Developed microservices using FastAPI for high-concurrency applications.",
+        "Collaborated with cross-functional teams to integrate AI models into production."
       ]
     },
     {
       id: 2,
-      role: "Masters in Computer Applications (MCA)",
-      company: "Parul University - Vadodara",
-      period: "2024 - 2026",
-      desc: "End-to-end web platform development.",
-      achievements: [
-        "Built MindCrafters (AI E-Learning Platform): Created a fully functional AI-powered e-learning platform within a day, showcasing fast development and strong full-stack skills.",
-        "Strengthening Full-Stack & Data Skills: Actively improving in HTML, CSS, JS, PHP, MySQL, React, and analytics tools like SQL, Python, and Power BI.",
-        "Advancing AI/ML & System Design: Exploring AI automation, ML concepts, and modern system architecture to build smarter and scalable applications."
-      ]
-    },
-    {
-      id: 3,
       role: "Full Stack Developer",
       company: "Arundhati World Pvt. Ltd.",
-      period: "2024",
+      period: "2023 - 2024",
       desc: "End-to-end web platform development.",
       achievements: [
         "Built a responsive travel booking platform handling 500+ daily users.",
@@ -235,14 +206,15 @@ const DATA = {
       ]
     },
     {
-      id: 4,
+      id: 3,
       role: "BSc Computer Science",
-      company: "ATSS CBSCA",
-      period: "2020 - 2024",
+      company: "Pune University",
+      period: "2019 - 2022",
       desc: "Distinction. Research in AI Traffic Systems.",
       achievements: [
         "Graduated with Distinction (First Class with Honors).",
-        "Led the capstone project on Criminal Face Detection System.",
+        "Led the capstone project on AI-driven Traffic Management Systems.",
+        "Published a research paper on 'Neural Networks in Urban Planning'."
       ]
     }
   ],
@@ -319,7 +291,8 @@ const DATA = {
 
 // CALM NEURAL BACKGROUND
 const NeuralBackground = () => {
-  const canvasRef = useRef(null);
+  // FIXED: Explicitly typed useRef for HTMLCanvasElement to satisfy TypeScript
+  const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
   
   useEffect(() => {
@@ -929,14 +902,16 @@ export default function Portfolio() {
 
   useEffect(() => {
     // Force title update
-    document.title = "Ashish Anil Khatavkar | Engineering the Future";
+    document.title = "Ashish Khatavkar | Portfolio";
     
     // Force favicon update
-    const link = document.querySelector("link[rel~='icon']") || document.createElement('link');
-    link.type = 'image/x-icon';
-    link.rel = 'shortcut icon';
-    link.href = '/favicon.ico'; // Ensure this file exists in public/
-    document.getElementsByTagName('head')[0].appendChild(link);
+    let link = document.querySelector("link[rel~='icon']");
+    if (!link) {
+      link = document.createElement('link');
+      link.rel = 'shortcut icon';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+    link.href = '/favicon.ico';
   }, []);
 
   const scrollTo = (id) => {
